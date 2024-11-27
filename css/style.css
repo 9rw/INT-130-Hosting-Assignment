@@ -1,0 +1,43 @@
+* {
+    font-family: monospace;
+}
+
+.grid-pattern {
+    background-image: radial-gradient(circle,
+            rgb(71, 45, 126) 2px,
+            transparent 2px);
+    background-size: 2.5rem 2.5rem;
+    background-position: center center;
+}
+
+@keyframes bounce {
+
+    0%, 100% {
+        transform: translateY(0);
+        rotate: 0deg;
+    }
+    40% {
+        transform: translateY(-2rem);
+    }
+}
+
+@keyframes line {
+    0%, 100% {
+        width: 70%;
+    }
+    40% {
+        width: 30%;
+    }
+}
+.line {
+    animation: line 5000ms infinite ease-in-out;
+}
+.bounce {
+    animation: none;
+}
+
+@media (min-width: 640px) {
+    .bounce {
+        animation: bounce 3000ms infinite ease-in-out;
+    }
+}
